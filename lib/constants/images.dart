@@ -10,6 +10,10 @@ class Assets {
   /// assets/images/historybottomitemgrey.svg
   static const String imagesHistorybottomitemgrey = "assets/images/historybottomitemgrey.svg";
 
+  /// Assets for imagesIconsgoogle
+  /// assets/images/iconsgoogle.png
+  static const String imagesIconsgoogle = "assets/images/iconsgoogle.png";
+
   /// Assets for imagesOneprofile
   /// assets/images/oneprofile.png
   static const String imagesOneprofile = "assets/images/oneprofile.png";
