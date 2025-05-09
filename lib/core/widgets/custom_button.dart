@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:moneymateapp/core/styles/project_colors.dart';
+import 'package:moneymateapp/core/styles/textstyles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.text});
+  const CustomButton({super.key, required this.text, this.color, this.textcolor});
   final String text;
+  final Color? color;
+  final Color? textcolor;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -12,9 +16,11 @@ class CustomButton extends StatelessWidget {
       height: height * 0.07,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.blue
-      ),
-      child:  Text(text),
+        color:color ?? ProjectColors.primaryColor
+              ),
+      child:  Text(text, style:  Textstyles.textbutton.copyWith(
+        color: textcolor?? ProjectColors.secondaryColor
+      ),),
     );
   }
 }
