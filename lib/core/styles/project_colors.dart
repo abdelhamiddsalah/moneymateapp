@@ -6,5 +6,4 @@ class ProjectColors {
   static const Color thirdColor = Color(0xFF212325);
   static const Color greyColor = Color(0xFF91919F);
   static const Color redColor = Color(0xFFD8171B);
-  static const Color cardColor = Color(0xFFEBEFFB);
 }
