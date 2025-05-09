@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moneymateapp/constants/images.dart';
-import 'package:moneymateapp/features/auth/features/login/presentation/pages/login_view.dart';
+import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
 
 class BottomNaviationBar extends StatefulWidget {
   const BottomNaviationBar({super.key});
