@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:moneymateapp/core/routing/routes.dart';
-import 'package:moneymateapp/features/auth/features/login/presentation/pages/login_view.dart';
+import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
+import 'package:moneymateapp/features/auth/sinup/presentation/pages/sinup_view.dart';
 import 'package:moneymateapp/features/onboarding/presentation/screens/onboarding_view.dart';
 
 
@@ -17,6 +18,10 @@ class AppRouting {
        GoRoute(
         path: Routes.login,
         builder: (context, state) => const LoginView(),
+      ),
+       GoRoute(
+        path: Routes.signup,
+        builder: (context, state) => const SinupView(),
       ),
     ],
   );
