@@ -46,6 +46,10 @@ class Assets {
   /// assets/images/sendemail.png
   static const String imagesSendemail = "assets/images/sendemail.png";
 
+  /// Assets for imagesSuccess
+  /// assets/images/success.png
+  static const String imagesSuccess = "assets/images/success.png";
+
   /// Assets for imagesUserbottomitemblue
   /// assets/images/userbottomitemblue.svg
   static const String imagesUserbottomitemblue = "assets/images/userbottomitemblue.svg";

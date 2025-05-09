@@ -15,7 +15,7 @@ class OnboardingViewBody extends StatelessWidget {
     final horizontalPadding = screenSize.width * 0.08;
     
     return Scaffold(
-      backgroundColor: ProjectColors.secondaryColor,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {

@@ -12,7 +12,8 @@ class SecondPartInHome extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     
     // Calculate appropriate heights based on screen size
-    final listViewHeight = screenHeight * 0.35; // Adjust this percentage as needed
+    // Use less height to prevent overflow
+    final listViewHeight = screenHeight * 0.30; // Reduced from 0.35
     
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -20,6 +21,7 @@ class SecondPartInHome extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min, // Important: Use minimum space needed
         children: [
           // Header row with "Recent transactions" and "See all"
           Row(
@@ -51,24 +53,26 @@ class SecondPartInHome extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: screenHeight * 0.02), // Responsive spacing
-          
-          // Transaction list with fixed height
-          SizedBox(
-            height: listViewHeight,
-            child: ListView.builder(
-              padding: EdgeInsets.zero,
-              physics: const BouncingScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: 5,
-              itemBuilder: (context, index) => Padding(
-                padding: EdgeInsets.only(bottom: screenHeight * 0.012),
-                child: TransactionCard(
-                  merchantName: 'Fathalla Market',
-                  date: 'Today 8:00',
-                  time: 'AM',
-                  amount: 2,
-                  icon: Icons.wallet_giftcard,
+          SizedBox(height: screenHeight * 0.015), // Reduced spacing
+          Flexible(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                maxHeight: listViewHeight,
+              ),
+              child: ListView.builder(
+                padding: EdgeInsets.zero,
+                physics: const BouncingScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 5,
+                itemBuilder: (context, index) => Padding(
+                  padding: EdgeInsets.only(bottom: screenHeight * 0.01), // Reduced padding
+                  child: TransactionCard(
+                    merchantName: 'Fathalla Market',
+                    date: 'Today 8:00',
+                    time: 'AM',
+                    amount: 2,
+                    icon: Icons.wallet_giftcard,
+                  ),
                 ),
               ),
             ),
