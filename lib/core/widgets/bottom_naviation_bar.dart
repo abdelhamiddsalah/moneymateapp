@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moneymateapp/constants/images.dart';
+import 'package:moneymateapp/core/styles/project_colors.dart';
 import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
 
 class BottomNaviationBar extends StatefulWidget {
@@ -49,6 +50,10 @@ class _MainAppState extends State<BottomNaviationBar> {
 
   @override
   Widget build(BuildContext context) {
+    // تحديد ألوان الخط والأيقونات
+    final Color activeColor = ProjectColors.primaryColor;
+    final Color inactiveColor = ProjectColors.greyColor;
+    
     return Scaffold(
       body: PageView(
         controller: _pageController,
@@ -72,15 +77,17 @@ class _MainAppState extends State<BottomNaviationBar> {
           onTap: _onItemTapped,
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.white,
-          selectedItemColor: Colors.blue,
-          unselectedItemColor: Colors.grey,
-          selectedLabelStyle: const TextStyle(
+          selectedItemColor: activeColor,
+          unselectedItemColor: inactiveColor,
+          selectedLabelStyle: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 12,
+            color: activeColor, // لون النص عند التحديد
           ),
-          unselectedLabelStyle: const TextStyle(
+          unselectedLabelStyle: TextStyle(
             fontWeight: FontWeight.normal,
             fontSize: 12,
+            color: inactiveColor, // لون النص عند عدم التحديد
           ),
           items: [
             BottomNavigationBarItem(
