@@ -42,7 +42,9 @@ class BobySinupView extends StatelessWidget {
 
             CustomRowAndText(),
 
-            CustomButton(text: 'Sign Up'),
+            CustomButton(
+              onTap: () => GoRouter.of(context).push(Routes.home),
+              text: 'Sign Up'),
             Text("OR", style: Textstyles.text14.copyWith(color: Colors.grey)),
 
             ButtonGoogle(),
