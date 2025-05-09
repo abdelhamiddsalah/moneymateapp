@@ -1,6 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:moneymateapp/core/routing/routes.dart';
+import 'package:moneymateapp/features/auth/forgetpassword/presentation/screens/forget_password_view.dart';
 import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
+import 'package:moneymateapp/features/auth/resetpassword/presentation/screens/reset_password_view.dart';
 import 'package:moneymateapp/features/auth/sinup/presentation/pages/sinup_view.dart';
 import 'package:moneymateapp/features/onboarding/presentation/screens/onboarding_view.dart';
 
@@ -23,6 +25,8 @@ class AppRouting {
         path: Routes.signup,
         builder: (context, state) => const SinupView(),
       ),
+      GoRoute(path: Routes.forgetpassword, builder: (context, state) => const ForgetPasswordView(),),
+      GoRoute(path: Routes.resetpassword, builder: (context, state) => ResetPasswordView(),),
     ],
   );
 }
