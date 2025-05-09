@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:moneymateapp/constants/images.dart';
+import 'package:moneymateapp/core/routing/routes.dart';
 import 'package:moneymateapp/core/styles/project_colors.dart';
 import 'package:moneymateapp/core/styles/textstyles.dart';
 import 'package:moneymateapp/core/widgets/custom_button.dart';
@@ -52,9 +54,14 @@ class OnboardingViewBody extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: constraints.maxHeight * 0.05),
-                      CustomButton(text: 'Sign Up'),
+                      CustomButton(text: 'Sign Up', onTap: () {
+                          GoRouter.of(context).push(Routes.signup);
+                        },),
                       SizedBox(height: constraints.maxHeight * 0.02),
                       CustomButton(
+                        onTap: () {
+                          GoRouter.of(context).push(Routes.login);
+                        },
                         text: 'Login',
                         textcolor: ProjectColors.primaryColor,
                         color: ProjectColors.primaryColor.withOpacity(0.2),
