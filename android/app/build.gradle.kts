@@ -11,7 +11,9 @@ plugins {
 android {
     namespace = "com.example.moneymateapp"
     compileSdk = flutter.compileSdkVersion
+
     ndkVersion = "27.0.12077973" // ✅ تم التعديل هنا
+
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
