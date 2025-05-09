@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moneymateapp/features/auth/features/login/presentation/widgets/body_login_view.dart';
+import 'package:moneymateapp/features/auth/login/presentation/widgets/body_login_view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
