@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moneymateapp/core/extention/extention.dart';
 import 'package:moneymateapp/core/styles/project_colors.dart';
 import 'package:moneymateapp/core/styles/textstyles.dart';
 
@@ -18,6 +19,7 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 

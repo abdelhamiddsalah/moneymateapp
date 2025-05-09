@@ -6,12 +6,14 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        centerTitle: true,
+        title: Text('Login',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
       ),
-      body:BodyLoginView()
-    
+      body: BodyLoginView(),
     );
   }
 }
