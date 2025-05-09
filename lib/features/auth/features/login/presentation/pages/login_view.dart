@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moneymateapp/core/widgets/custom_textformfiled.dart';
+import 'package:moneymateapp/features/auth/features/login/presentation/widgets/body_login_view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -10,14 +10,8 @@ class LoginView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Login'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-          CustomTextFormField(hintText: 'hintText')
-          ],
-        ),
-      ),
+      body:BodyLoginView()
+    
     );
   }
 }
