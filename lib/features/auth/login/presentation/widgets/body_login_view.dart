@@ -5,6 +5,7 @@ import 'package:moneymateapp/core/routing/routes.dart';
 import 'package:moneymateapp/core/styles/project_colors.dart';
 import 'package:moneymateapp/core/styles/textstyles.dart';
 import 'package:moneymateapp/core/widgets/custom_button.dart';
+import 'package:moneymateapp/core/widgets/custom_login_and_sinup.dart';
 import 'package:moneymateapp/core/widgets/custom_textformfiled.dart';
 
 class BodyLoginView extends StatelessWidget {
@@ -35,27 +36,9 @@ class BodyLoginView extends StatelessWidget {
               ),
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Don\'t have an account? ',
-                  style: Textstyles.text16.copyWith(color: Colors.grey),
-                ),
-
-                GestureDetector(
-                  onTap: () {
-                    GoRouter.of(context).push(Routes.signup);
-                  },
-                  child: Text(
-                    'Sign Up',
-                    style: Textstyles.text18.copyWith(
-                      color: ProjectColors.primaryColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            CustomLoginAndSinup(text: "Don't have an account?", navigation: 'Sign Up', onTap: () {
+              GoRouter.of(context).push(Routes.signup);
+            },),
           ],
         ),
       ),

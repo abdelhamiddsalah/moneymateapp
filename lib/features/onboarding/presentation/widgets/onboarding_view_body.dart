@@ -64,6 +64,7 @@ class OnboardingViewBody extends StatelessWidget {
                         },
                         text: 'Login',
                         textcolor: ProjectColors.primaryColor,
+                        // ignore: deprecated_member_use
                         color: ProjectColors.primaryColor.withOpacity(0.2),
                       ),
                       SizedBox(height: constraints.maxHeight * 0.02),

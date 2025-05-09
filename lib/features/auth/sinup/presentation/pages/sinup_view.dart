@@ -12,7 +12,8 @@ class SinupView extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text('Sign Up',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),),
-      ),
+
+      ),backgroundColor: Colors.white,
       body: BobySinupView(),
     );
   }
