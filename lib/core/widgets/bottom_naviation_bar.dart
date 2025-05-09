@@ -50,24 +50,6 @@ class _MainAppState extends State<BottomNaviationBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: const Text(
-          'Vox Cinema',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: Text(
-              '25 EGP',
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-      // استخدام PageView للتمكين من التنقل بالسحب بين الصفحات
       body: PageView(
         controller: _pageController,
         onPageChanged: _onPageChanged,
