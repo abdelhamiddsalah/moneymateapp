@@ -8,6 +8,7 @@ class Textstyles {
     fontWeight: FontWeight.w600,
     color: ProjectColors.secondaryColor,
   );
+   static final text8= TextStyle(fontSize: 10.sp);
    static final text14 = TextStyle(fontSize: 14.sp);
   static final text16 = TextStyle(fontSize: 16.sp);
     static final text18 = TextStyle(fontSize: 18.sp);
