@@ -17,7 +17,7 @@ class TransactionsDetailesBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            height: 300.h,
+           
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,

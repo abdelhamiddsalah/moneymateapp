@@ -33,6 +33,13 @@ class AppRouting {
       GoRoute(path: Routes.forgetpassword, builder: (context, state) => const ForgetPasswordView(),),
       GoRoute(path: Routes.resetpassword, builder: (context, state) => ResetPasswordView(),),
       GoRoute(path: Routes.home, builder: (context, state) => HomeView(),),
+
+       GoRoute(path: Routes.transactiondetails, builder: (context, state) => TransactionsDetailes(),),
+
+      GoRoute(path: Routes.bottomnav, builder: (context, state) => BottomNaviationBar(),),
+      GoRoute(path: Routes.sendemail, builder: (context, state) => SendEmailWidget(),),
+      GoRoute(path: Routes.success, builder: (context, state) => SuccessWidget(),),
+
     ],
   );
 }
