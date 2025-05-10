@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:moneymateapp/core/routing/app_routing.dart';
 import 'package:moneymateapp/firebase_options.dart';
+import 'package:moneymateapp/indepency_injection.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await init();
   runApp(const MyApp());
 }
 
