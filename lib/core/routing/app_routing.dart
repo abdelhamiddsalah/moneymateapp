@@ -7,6 +7,8 @@ import 'package:moneymateapp/features/auth/forgetpassword/presentation/screens/f
 import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
 import 'package:moneymateapp/features/auth/resetpassword/presentation/screens/reset_password_view.dart';
 import 'package:moneymateapp/features/auth/sinup/presentation/pages/sinup_view.dart';
+import 'package:moneymateapp/features/budgets/presentation/pages/budget_view.dart';
+import 'package:moneymateapp/features/budgets/presentation/pages/expense_view.dart';
 import 'package:moneymateapp/features/home/presentation/pages/home_view.dart';
 import 'package:moneymateapp/features/home/presentation/pages/transactions_detailes.dart';
 import 'package:moneymateapp/features/onboarding/presentation/screens/onboarding_view.dart';
@@ -43,6 +45,7 @@ class AppRouting {
       GoRoute(path: Routes.success, builder: (context, state) => SuccessWidget(),),
       GoRoute(path: Routes.profile, builder: (context, state) => ProfileView(),),
       GoRoute(path: Routes.editaccount, builder: (context, state) => EditAccountView(),),
+      GoRoute(path: Routes.budgets, builder: (context, state) => ExpenseView(),),
     ],
   );
 }

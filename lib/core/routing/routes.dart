@@ -12,4 +12,5 @@ class Routes {
   static const String success = '/success';
   static const String profile = '/profile';
   static const String editaccount = '/editaccount';
+  static const String budgets = '/budgets'; 
 }
