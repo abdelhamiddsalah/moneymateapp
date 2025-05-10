@@ -27,7 +27,7 @@ class BodyLoginView extends StatelessWidget {
                 icon: Icon(Icons.visibility_outlined, color: Colors.grey),
               ),
             ),
-            CustomButton(onTap: () => GoRouter.of(context).push(Routes.home),text: 'Login'),
+            CustomButton(onTap: () => GoRouter.of(context).push(Routes.budgets),text: 'Login'),
             Text(
               'Forgot Password?',
               style: Textstyles.text18.copyWith(
