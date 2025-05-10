@@ -10,4 +10,6 @@ class Routes {
   static const String bottomnav = '/bottomnav';
   static const String sendemail = '/sendemail';
   static const String success = '/success';
+  static const String profile = '/profile';
+  static const String editaccount = '/editaccount';
 }

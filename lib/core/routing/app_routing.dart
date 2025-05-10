@@ -10,6 +10,8 @@ import 'package:moneymateapp/features/auth/sinup/presentation/pages/sinup_view.d
 import 'package:moneymateapp/features/home/presentation/pages/home_view.dart';
 import 'package:moneymateapp/features/home/presentation/pages/transactions_detailes.dart';
 import 'package:moneymateapp/features/onboarding/presentation/screens/onboarding_view.dart';
+import 'package:moneymateapp/features/profile/presentation/screens/edit_account_view.dart';
+import 'package:moneymateapp/features/profile/presentation/screens/profile_view.dart';
 
 
 class AppRouting {
@@ -39,7 +41,8 @@ class AppRouting {
       GoRoute(path: Routes.bottomnav, builder: (context, state) => BottomNaviationBar(),),
       GoRoute(path: Routes.sendemail, builder: (context, state) => SendEmailWidget(),),
       GoRoute(path: Routes.success, builder: (context, state) => SuccessWidget(),),
-
+      GoRoute(path: Routes.profile, builder: (context, state) => ProfileView(),),
+      GoRoute(path: Routes.editaccount, builder: (context, state) => EditAccountView(),),
     ],
   );
 }

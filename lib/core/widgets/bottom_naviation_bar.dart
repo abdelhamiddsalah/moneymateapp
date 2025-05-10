@@ -4,6 +4,7 @@ import 'package:moneymateapp/constants/images.dart';
 import 'package:moneymateapp/core/styles/project_colors.dart';
 import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
 import 'package:moneymateapp/features/home/presentation/pages/home_view.dart';
+import 'package:moneymateapp/features/profile/presentation/screens/profile_view.dart';
 
 class BottomNaviationBar extends StatefulWidget {
   const BottomNaviationBar({super.key});
@@ -27,7 +28,7 @@ class _MainAppState extends State<BottomNaviationBar> {
     HomeView(),
     LoginView(),
     LoginView(),
-    LoginView(),
+    ProfileView(),
   ];
 
   void _onItemTapped(int index) {
