@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:moneymateapp/core/routing/routes.dart';
 import 'package:moneymateapp/core/styles/project_colors.dart';
 import 'package:moneymateapp/core/styles/textstyles.dart';
 
@@ -25,70 +27,76 @@ class TransactionCard extends StatelessWidget {
     // Get screen dimensions for responsive layout
     final screenWidth = MediaQuery.of(context).size.width;
     
-    return Container(
-      padding: EdgeInsets.all(screenWidth * 0.035),
-      decoration: BoxDecoration(
-        color: ProjectColors.secondaryColor,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Row(
-        children: [
-          // Icon containe
-          SizedBox(width: screenWidth * 0.03),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  merchantName,
-                  style: Textstyles.textbutton.copyWith(
-                    fontSize: screenWidth * 0.042,
-                    fontWeight: FontWeight.w500,
-                    color: const Color(0xff000000),
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                SizedBox(height: screenWidth * 0.01),
-                Row(
-                  children: [
-                    Text(
-                      '$date $time',
-                      style: Textstyles.textbutton.copyWith(
-                        fontSize: screenWidth * 0.032,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xff666666),
-                      ),
+    return InkWell(
+      onTap: () {
+        // Handle tap event
+  GoRouter.of(context).push(Routes.transactiondetails);
+      },
+      child: Container(
+        padding: EdgeInsets.all(screenWidth * 0.035),
+        decoration: BoxDecoration(
+          color: ProjectColors.secondaryColor,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            // Icon containe
+            SizedBox(width: screenWidth * 0.03),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    merchantName,
+                    style: Textstyles.textbutton.copyWith(
+                      fontSize: screenWidth * 0.042,
+                      fontWeight: FontWeight.w500,
+                      color: const Color(0xff000000),
                     ),
-                    SizedBox(width: screenWidth * 0.05),
-                      Icon(
-            icon,
-            color: Colors.blue,
-            size: screenWidth * 0.045,
-          ),
-          
-                  ],
-                ),
-              ],
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  SizedBox(height: screenWidth * 0.01),
+                  Row(
+                    children: [
+                      Text(
+                        '$date $time',
+                        style: Textstyles.textbutton.copyWith(
+                          fontSize: screenWidth * 0.032,
+                          fontWeight: FontWeight.w400,
+                          color: const Color(0xff666666),
+                        ),
+                      ),
+                      SizedBox(width: screenWidth * 0.05),
+                        Icon(
+              icon,
+              color: Colors.blue,
+              size: screenWidth * 0.045,
             ),
-          ),
-          
-          // Amount
-          Text(
-            '-169 EGP',
-            style: Textstyles.textbutton.copyWith(
-              fontSize: screenWidth * 0.042,
-              fontWeight: FontWeight.w600,
-              color:ProjectColors.redColor,
+            
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+            
+            // Amount
+            Text(
+              '-169 EGP',
+              style: Textstyles.textbutton.copyWith(
+                fontSize: screenWidth * 0.042,
+                fontWeight: FontWeight.w600,
+                color:ProjectColors.redColor,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
