@@ -7,7 +7,6 @@ import 'package:moneymateapp/features/auth/forgetpassword/presentation/screens/f
 import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
 import 'package:moneymateapp/features/auth/resetpassword/presentation/screens/reset_password_view.dart';
 import 'package:moneymateapp/features/auth/sinup/presentation/pages/sinup_view.dart';
-import 'package:moneymateapp/features/budgets/presentation/pages/budget_view.dart';
 import 'package:moneymateapp/features/budgets/presentation/pages/expense_view.dart';
 import 'package:moneymateapp/features/home/presentation/pages/home_view.dart';
 import 'package:moneymateapp/features/home/presentation/pages/transactions_detailes.dart';
