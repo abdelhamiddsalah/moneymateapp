@@ -1,5 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:moneymateapp/core/routing/routes.dart';
+import 'package:moneymateapp/core/widgets/bottom_naviation_bar.dart';
+import 'package:moneymateapp/core/widgets/send_email_widget.dart';
+import 'package:moneymateapp/core/widgets/success_widget.dart';
 import 'package:moneymateapp/features/auth/forgetpassword/presentation/screens/forget_password_view.dart';
 import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
 import 'package:moneymateapp/features/auth/resetpassword/presentation/screens/reset_password_view.dart';
@@ -30,7 +33,6 @@ class AppRouting {
       GoRoute(path: Routes.forgetpassword, builder: (context, state) => const ForgetPasswordView(),),
       GoRoute(path: Routes.resetpassword, builder: (context, state) => ResetPasswordView(),),
       GoRoute(path: Routes.home, builder: (context, state) => HomeView(),),
-       GoRoute(path: Routes.transactiondetails, builder: (context, state) => TransactionsDetailes(),),
     ],
   );
 }

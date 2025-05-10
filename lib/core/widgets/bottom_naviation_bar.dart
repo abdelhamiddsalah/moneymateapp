@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:moneymateapp/constants/images.dart';
 import 'package:moneymateapp/core/styles/project_colors.dart';
 import 'package:moneymateapp/features/auth/login/presentation/pages/login_view.dart';
+import 'package:moneymateapp/features/home/presentation/pages/home_view.dart';
 
 class BottomNaviationBar extends StatefulWidget {
   const BottomNaviationBar({super.key});
@@ -12,8 +14,7 @@ class BottomNaviationBar extends StatefulWidget {
 
 class _MainAppState extends State<BottomNaviationBar> {
   int _selectedIndex = 0;
-  
-  // PageController لتمكين التنقل بالسحب بين الصفحات مع تأثيرات انتقال سلسة
+
   final PageController _pageController = PageController();
 
   @override
@@ -22,9 +23,8 @@ class _MainAppState extends State<BottomNaviationBar> {
     super.dispose();
   }
 
-  // قائمة الصفحات التي يتم استيرادها من الخارج
   final List<Widget> _pages = const [
-    LoginView(),
+    HomeView(),
     LoginView(),
     LoginView(),
     LoginView(),
@@ -33,7 +33,6 @@ class _MainAppState extends State<BottomNaviationBar> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      // التنقل إلى الصفحة المطلوبة مع تأثير انتقال سلس
       _pageController.animateToPage(
         index,
         duration: const Duration(milliseconds: 300),
@@ -50,16 +49,15 @@ class _MainAppState extends State<BottomNaviationBar> {
 
   @override
   Widget build(BuildContext context) {
-    // تحديد ألوان الخط والأيقونات
     final Color activeColor = ProjectColors.primaryColor;
     final Color inactiveColor = ProjectColors.greyColor;
-    
+
     return Scaffold(
       body: PageView(
         controller: _pageController,
         onPageChanged: _onPageChanged,
         children: _pages,
-        physics: const BouncingScrollPhysics(), // للحصول على تأثير ارتداد عند السحب
+        physics: const BouncingScrollPhysics(),
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
@@ -82,49 +80,49 @@ class _MainAppState extends State<BottomNaviationBar> {
           selectedLabelStyle: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 12,
-            color: activeColor, // لون النص عند التحديد
+            color: activeColor,
           ),
           unselectedLabelStyle: TextStyle(
             fontWeight: FontWeight.normal,
             fontSize: 12,
-            color: inactiveColor, // لون النص عند عدم التحديد
+            color: inactiveColor,
           ),
           items: [
             BottomNavigationBarItem(
-              icon: Image.asset(
+              icon: SvgPicture.asset(
                 _selectedIndex == 0
-                  ? Assets.imagesOvervirebottomitemblue
-                  : Assets.imagesOvervirebottomitemgrey,
+                    ? Assets.imagesOvervirebottomitemblue
+                    : Assets.imagesOvervirebottomitemgrey,
                 width: 24,
                 height: 24,
               ),
               label: 'Overview',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset(
+              icon: SvgPicture.asset(
                 _selectedIndex == 1
-                  ? Assets.imagesHistorybottomitemblue
-                  : Assets.imagesHistorybottomitemgrey,
+                    ? Assets.imagesHistorybottomitemblue
+                    : Assets.imagesHistorybottomitemgrey,
                 width: 24,
                 height: 24,
               ),
               label: 'History',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset(
+              icon: SvgPicture.asset(
                 _selectedIndex == 2
-                  ? Assets.imagesReportsbottomitemblue
-                  : Assets.imagesReportsbottomitemgrey,
+                    ? Assets.imagesReportsbottomitemblue
+                    : Assets.imagesReportsbottomitemgrey,
                 width: 24,
                 height: 24,
               ),
               label: 'Reports',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset(
+              icon: SvgPicture.asset(
                 _selectedIndex == 3
-                  ? Assets.imagesUserbottomitemblue
-                  : Assets.imagesUserbottomitemgrey,
+                    ? Assets.imagesUserbottomitemblue
+                    : Assets.imagesUserbottomitemgrey,
                 width: 24,
                 height: 24,
               ),

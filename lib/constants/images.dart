@@ -46,10 +46,6 @@ class Assets {
   /// assets/images/sendemail.png
   static const String imagesSendemail = "assets/images/sendemail.png";
 
-  /// Assets for imagesTickCircle
-  /// assets/images/tick-circle.png
-  static const String imagesTickCircle = "assets/images/tick-circle.png";
-
   /// Assets for imagesUserbottomitemblue
   /// assets/images/userbottomitemblue.svg
   static const String imagesUserbottomitemblue = "assets/images/userbottomitemblue.svg";
